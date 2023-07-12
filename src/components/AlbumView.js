@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import NavBar from './NavBar'
 
 function AlbumView() {
     const { id } = useParams()
@@ -20,7 +19,7 @@ function AlbumView() {
 
     const renderSongs = justSongs.map((song, i) => {
         return (
-            <div key={i}>
+            <div key= {i}>
                 <p>{song.trackName}</p>
             </div>
         )
@@ -28,10 +27,10 @@ function AlbumView() {
 
     return (
         <div>
-            <NavBar />
             {renderSongs}
         </div>
     )
 }
+
 
 export default AlbumView
